@@ -333,8 +333,7 @@ const (
 // String returns a string representation of the tags_schema parameter, as
 // known to ElasticSearch.
 func (a HighlightTagsSchema) String() string {
-	switch a {
-	case TagsSchemaStyled:
+	if a == TagsSchemaStyled {
 		return "styled"
 	}
 	return ""
